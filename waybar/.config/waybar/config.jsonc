@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "custom/wifi",
+        "custom/bluetooth",
+        "backlight",
+        "pulseaudio",
+        "battery"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": 10
+        },
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}",
+        "tooltip": false
+    },
+
+    "custom/wifi": {
+        "format": "󰖩",
+        "tooltip": "Wi-Fi",
+        "on-click": "foot -e nmtui"
+    },
+
+    "custom/bluetooth": {
+        "format": "󰂯",
+        "tooltip": "Bluetooth",
+        "on-click": "foot -e bluetui"
+    },
+
+    "backlight": {
+        "format": "󰃠 {percent}%",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "scroll-step": 5,
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "battery": {
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-full": "󰁹 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "tooltip": false
+    }
+}
