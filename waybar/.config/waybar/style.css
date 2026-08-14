@@ -1,85 +1,121 @@
+@define-color highlight rgba(118, 241, 250, 0.6);
+@define-color dark-9 rgba(24, 24, 27, 0.7);
+@define-color dark-8 rgba(39, 39, 42, 0.6);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color dark-6 rgba(82, 82, 91, 1);
+@define-color dark-5 rgba(113, 113, 122, 1);
+
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: 600;
-    font-size: 14px;
-    min-height: 0;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 13px;
 }
 
 window#waybar {
-    background: #202020;
-    color: #ffffff;
-}
-
-/* Workspaces */
-
-#workspaces {
-    margin-left: 6px;
+  background-color: @dark-9;
+  color: white;
+  border-radius: 0px;
 }
 
 #workspaces button {
-    padding: 0 6px;
-    color: #555555;
-    background: transparent;
-    box-shadow: none;
-    text-shadow: none;
+  padding: 0px 2px;
+  margin: 0px 0px 0px 0px;
+  background: transparent;
+  border-radius: 0px;
+  color: white;
 }
 
 #workspaces button.active {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: none;
+  background: @highlight;
+  color: black;
+  font-weight: 700;
 }
 
-#workspaces button:hover {
-    color: #aaaaaa;
-    background: transparent;
+#tray {
+  background: @dark-8;
+  border-radius: 5px;
+  padding: 2px 10px;
+  margin: 4px 6px 5px 0;
 }
 
-/* Clock */
-
-#clock {
-    color: #ffffff;
+#tray menu {
+  background: @dark-9;
+  color: white;
+  border-radius: 8px;
 }
 
-/* Right side */
-
-#custom-wifi,
-#custom-bluetooth,
-#backlight,
-#pulseaudio,
-#battery {
-    padding: 0 8px;
-    color: #ffffff;
-    background: transparent;
+#submap,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#volume {
+  border-radius: 5px;
+  padding: 2px 10px;
+  background: @dark-8;
+  margin: 4px 6px 5px 0px;
 }
 
-#custom-wifi:hover,
-#custom-bluetooth:hover,
-#backlight:hover,
-#pulseaudio:hover,
-#battery:hover {
-    color: #aaaaaa;
-    background: transparent;
+#submap,
+#workspaces button.urgent {
+  background: rgba(227, 81, 73, 1);
+  color: black;
 }
 
-/* Volume */
-
-#pulseaudio.muted {
-    color: #555555;
+#pulseaudio-slider {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 8px;
 }
 
-/* Battery */
-
-#battery.warning {
-    color: #aaaaaa;
+#pulseaudio-slider slider {
+  all: unset;
+  min-height: 0;
+  min-width: 0;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
 
-#battery.critical {
-    color: #777777;
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 75px;
+  border-radius: 5px;
+  background: @dark-7;
 }
 
-#battery.charging {
-    color: #ffffff;
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background: @highlight;
+}
+
+#media {
+  color: #42ff9f;
+  margin: 7px 0px 7px 80px;
+}
+
+#custom-media-animation {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+#custom-media-now-playing {
+  margin-right: 10px;
+}
+
+#custom-media-time {
+  color: @dark-5;
+  font-size: 14px;
+}
+
+tooltip {
+  background: @dark-9;
+  border-radius: 5px;
+}
+
+tooltip label {
+  color: white;
 }
