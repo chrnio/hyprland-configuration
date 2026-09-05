@@ -16,7 +16,7 @@ options.screenshots = {
 
 options.animations = {
 	enabled = true,
-	profile = "fast",
+	profile = "superfast",
 	duration_scale = 1.0,
 }
 
