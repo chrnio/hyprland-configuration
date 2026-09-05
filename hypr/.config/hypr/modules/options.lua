@@ -4,7 +4,7 @@ options.programs = {
 	terminal = "kitty",
 	editor = "neovide",
 	file_manager = "nautilus",
-	menu = "fuzzel",
+	menu = "rofi -show drun -theme ~/.config/rofi/config.rasi",
 	browser = "librewolf",
 }
 

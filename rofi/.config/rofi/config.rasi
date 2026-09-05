@@ -1,0 +1,90 @@
+* {
+    bg:        rgba(0, 0, 0, 0.5);
+    fg:        #c0caf5;
+    fg-alt:    #565f89;
+    accent:    #2ac3de;
+    urgent:    #f7768e;
+
+    background-color: transparent;
+    text-color:        @fg;
+    font:               "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    background-color: @bg;
+    border:            2px;
+    border-color:      @accent;
+    border-radius:     0px;
+    width:             480px;
+    location:          center;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:           6px;
+    children:          [ "inputbar", "listview" ];
+}
+
+inputbar {
+    background-color: transparent;
+    text-color:        @fg;
+    padding:           5px 6px;
+    border:            0px 0px 2px 0px;
+    border-color:      @fg-alt;
+    children:          [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color: @accent;
+    padding:     0px 6px 0px 0px;
+}
+
+entry {
+    text-color:        @fg;
+    placeholder:       "Search...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    columns:           1;
+    lines:             7;
+    spacing:           2px;
+    cycle:             true;
+    dynamic:           true;
+    scrollbar:         false;
+}
+
+element {
+    background-color: transparent;
+    text-color:        @fg;
+    padding:           4px 6px;
+    border-radius:     0px;
+    orientation:       horizontal;
+    spacing:           8px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:        #000000;
+}
+
+element urgent {
+    text-color: @urgent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:        inherit;
+    vertical-align:    0.5;
+}
+
+element-icon {
+    size:              16px;
+    background-color: transparent;
+}
+
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+}
