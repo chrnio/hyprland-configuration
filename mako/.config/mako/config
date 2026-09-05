@@ -13,7 +13,7 @@ border-color=#2ac3de
 border-size=2
 border-radius=0
 
-font=JetBrainsMono Nerd Font 11
+font=JetBrainsMono Nerd Font 10
 default-timeout=3000
 ignore-timeout=0
 max-visible=5
