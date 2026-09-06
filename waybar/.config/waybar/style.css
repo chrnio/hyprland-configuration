@@ -1,5 +1,5 @@
 * {
-    font-family: monospace;
+    font-family: "JetBrainsMono NF Medium";
     font-size: 12px;
     min-height: 0;
     border: none;
@@ -9,8 +9,8 @@
 
 window#waybar {
     /* background-color: #16161e; */
-    /* background-color: rgba(26, 27, 38, 0.95); */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(26, 27, 38, 1.0);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     color: #c0caf5;
 }
 
@@ -25,7 +25,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #2ac3de;
+    color: #7aa2f7;
 }
 
 #workspaces button.urgent {

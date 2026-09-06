@@ -1,13 +1,13 @@
 * {
-    bg:        rgba(0, 0, 0, 0.5);
+    bg:        #1a1b26;
     fg:        #c0caf5;
     fg-alt:    #565f89;
-    accent:    #2ac3de;
+    accent:    #7aa2f7;
     urgent:    #f7768e;
 
     background-color: transparent;
     text-color:        @fg;
-    font:               "JetBrainsMono Nerd Font 10";
+    font:              "JetBrainsMono Nerd Font 10";
 }
 
 window {
@@ -15,7 +15,7 @@ window {
     border:            2px;
     border-color:      @accent;
     border-radius:     0px;
-    width:             480px;
+    width:             400px;
     location:          center;
 }
 
@@ -36,7 +36,7 @@ inputbar {
 
 prompt {
     text-color: @accent;
-    padding:     0px 6px 0px 0px;
+    padding:    0px 6px 0px 0px;
 }
 
 entry {
@@ -66,7 +66,7 @@ element {
 
 element selected {
     background-color: @accent;
-    text-color:        #000000;
+    text-color:        #1a1b26;
 }
 
 element urgent {
